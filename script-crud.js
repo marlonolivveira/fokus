@@ -39,7 +39,6 @@ function criarElementoTarefa(tarefa) {
     botao.classList.add('app_button-edit');
 
     botao.onclick = () => {
-        // debugger
         const novaDescricao = prompt("Qual é o novo nome da tarefa?");
         if(novaDescricao === ''){
             alert("Insira uma tarefa válida");
@@ -110,12 +109,6 @@ formAdicionarTarefa.addEventListener('submit', (evento) => {
     
 })
 
-// function mostrarTarefa(){
-//     tarefas.forEach(tarefa => {
-//         const elementoTarefa = criarElementoTarefa(tarefa);
-//         ulTarefas.append(elementoTarefa);
-//     })
-// }
 
 tarefas.forEach(tarefa => {
     const elementoTarefa = criarElementoTarefa(tarefa);
@@ -131,29 +124,6 @@ document.addEventListener('FocoFinalizado', () =>{
         atualizarTarefas();
     }
 })
-
-// btnRemoverConcluidas.onclick = () => {
-//     //const seletor = "app__section-task-list-item-complete";
-//     //para bugar a limpeza das tarefas basta usar a linha comentada ao inves da linha de baixo
-//     const seletor = ".app__section-task-list-item-complete";
-//     document.querySelectorAll(seletor).forEach(elemento => {
-//         elemento.remove();
-//     })
-
-//     tarefas = tarefas.filter(tarefa => !tarefa.completa)
-//     atualizarTarefas();
-// }
-
-// btnRomoverTodasTarefas.onclick = () => {
-//     //app__section-task-list-item-active para bugar e não remover todas
-//     const seletor = ".app__section-task-list-item";
-//     document.querySelectorAll(seletor).forEach(elemento => {
-//         elemento.remove();
-//     })
-    
-//     tarefas = [];
-//     atualizarTarefas();
-// }
 
 const removerTarefas = (somenteCompletas) => {
 
