@@ -1,3 +1,5 @@
+// const { parse } = require("path");
+
 const adicionarTarefaBt = document.querySelector('.app__button--add-task');
 const formAdicionarTarefa = document.querySelector('.app__form-add-task');
 const textarea = document.querySelector('.app__form-textarea');
@@ -52,7 +54,7 @@ function criarElementoTarefa(tarefa) {
     }
 
     const imagemBotao = document.createElement('img');
-    imagemBotao.setAttribute('src', 'https://github.com/marlonolivveira/fokus/tree/main/imagens/edit.png');
+    imagemBotao.setAttribute('src', '/imagens/edit.png');
     botao.append(imagemBotao);
 
     li.append(svg);
